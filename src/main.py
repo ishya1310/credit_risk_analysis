@@ -30,6 +30,8 @@ def main():
     print("\n Logistic Regression (Baseline model)")
     evaluate_model(lr_model, Xs_test, y_test)
 
+    print("\nRandom Forest (Final Model)")
+    evaluate_model(rf_model, Xu_test, y_test)
 
 
 if __name__ == "__main__":

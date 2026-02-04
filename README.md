@@ -95,8 +95,9 @@ was trained on unscaled features, following best practices for each model type.
   for credit risk screening tasks where identifying high-risk clients is critical.
 
 CREDIT_RISK_PREDICTION/
+
 │
-├── data/ 
+├── data/
 ├── src/ 
 │ ├── data_loading.py
 │ ├── label_creation.py
@@ -107,3 +108,11 @@ CREDIT_RISK_PREDICTION/
 │
 ├── README.md
 └── requirements.txt
+
+
+## How to Run
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt

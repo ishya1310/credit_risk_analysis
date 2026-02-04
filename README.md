@@ -94,7 +94,7 @@ was trained on unscaled features, following best practices for each model type.
 - Random Forest achieved high recall for Risky and Bad clients, making it suitable
   for credit risk screening tasks where identifying high-risk clients is critical.
 
-CREDIT_RISK_PREDICTION/
+CREDIT_RISK_ANALYSIS/
 
 │
 ├── data/

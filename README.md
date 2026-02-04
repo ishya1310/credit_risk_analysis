@@ -116,3 +116,35 @@ CREDIT_RISK_ANALYSIS/
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
+
+## Key Concepts Demonstrated
+
+Time-series aggregation
+
+Credit risk modeling
+
+Class imbalance handling
+
+Feature encoding and normalization
+
+Model comparison and evaluation
+
+Modular and clean ML project structure
+
+## Limitations and Future Work
+
+Risk labels are rule-based and not sourced from ground-truth default records.
+
+Future work could include:
+
+Hyperparameter tuning
+
+Cost-sensitive learning
+
+Gradient boosting models
+
+Probability-based risk scoring
+
+## Author
+
+Ishya Bommireddy

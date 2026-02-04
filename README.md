@@ -50,3 +50,60 @@ false negatives.
 Each client may have multiple credit history records, making aggregation a key
 challenge.
 
+## Methodology
+
+1. **Credit History Aggregation**
+   - Monthly credit records were aggregated at the client level.
+   - Risk labels were created using severity, frequency, and recency of
+     delinquency.
+
+2. **Label Creation**
+   - A new target variable `TYPE_OF_CLIENT` was created with three classes:
+     Trusted, Risky, and Bad.
+
+3. **Data Preprocessing**
+   - Application data was merged with the generated risk labels.
+   - Categorical features were converted using one-hot encoding.
+   - Numerical features (income, age, employment length) were normalized for
+     scale-sensitive models.
+4. **Modeling**
+   - **Logistic Regression** was used as a baseline model.
+   - **Random Forest Classifier** was used as the final model to capture
+     non-linear relationships and handle class imbalance.
+
+5. **Evaluation**
+   - Models were evaluated using:
+     - Confusion Matrix
+     - Precision, Recall, and F1-score
+     - Emphasis was placed on **recall for high-risk (Bad) clients** rather than
+     overall accuracy.
+
+## Models Used
+
+- Logistic Regression (Baseline)
+- Random Forest Classifier (Final Model)
+
+Logistic Regression was trained on scaled numerical features, while Random Forest
+was trained on unscaled features, following best practices for each model type.
+
+
+## Results
+
+- Logistic Regression provided a baseline understanding of the problem but showed
+  limitations due to class imbalance and linear assumptions.
+- Random Forest achieved high recall for Risky and Bad clients, making it suitable
+  for credit risk screening tasks where identifying high-risk clients is critical.
+
+CREDIT_RISK_PREDICTION/
+│
+├── data/ 
+├── src/ 
+│ ├── data_loading.py
+│ ├── label_creation.py
+│ ├── preprocessing.py
+│ ├── train.py
+│ ├── evaluate.py
+│ └── main.py
+│
+├── README.md
+└── requirements.txt
